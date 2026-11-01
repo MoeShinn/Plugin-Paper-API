@@ -1,0 +1,37 @@
+# ============================================================
+# UltimateWeapons - cấu hình chung
+# Mọi message dùng MiniMessage. Dùng /uw reload để áp dụng.
+# ============================================================
+
+# Tiền tố đứng trước mọi message của plugin
+prefix: "<dark_gray>[<gradient:#ff5555:#ffaa00>UltimateWeapons</gradient>]</dark_gray> "
+
+# Bật để in thêm log gỡ lỗi ra console
+debug: false
+
+messages:
+  no-permission: "<red>Bạn không có quyền dùng lệnh này."
+  usage: "<gray>Dùng: <yellow>/uw [give|list|addons|reload]"
+  usage-give: "<gray>Dùng: <yellow>/uw give (id) [người chơi]"
+  unknown-weapon: "<red>Không tìm thấy vũ khí <yellow><id></yellow><red>. Dùng <yellow>/uw list</yellow><red> để xem danh sách."
+  player-not-found: "<red>Không tìm thấy người chơi online tên <yellow><player></yellow><red>."
+  console-needs-player: "<red>Console phải chỉ định người chơi: <yellow>/uw give (id) (người chơi)"
+  received: "<green>Bạn đã nhận được <weapon><green>."
+  given: "<green>Đã đưa <weapon> <green>cho <yellow><player></yellow><green>."
+  inventory-full: "<yellow>Túi đồ của <player> đã đầy, vật phẩm đã được thả xuống đất."
+  list-empty: "<yellow>Chưa có vũ khí nào."
+  list-header: "<gold>Danh sách vũ khí <gray>(<count>)<gold>:"
+  # Hai dòng bên dưới KHÔNG có prefix. Dòng id sẽ tự gắn click chạy /uw give <id>
+  list-id: "<yellow><id>"
+  list-hover: "<gray>Click để nhận vũ khí này"
+  # <source> là "built-in" hoặc tên addon
+  list-info: "  <name> <dark_gray>| <gray><description> <dark_gray>[<source>]"
+  reload-success: "<green>Đã reload. Đã nạp <yellow><weapons></yellow><green> vũ khí từ <yellow><addons></yellow><green> addon."
+  reload-errors-header: "<red>Có <yellow><count></yellow><red> file bị lỗi và đã bị bỏ qua:"
+  reload-error-line: "<red> - <yellow><file></yellow><gray>: <reason>"
+  addons-empty: "<yellow>Chưa nạp addon nào. Hãy thả file .jar vào plugins/UltimateWeapons/addons/ rồi /uw reload."
+  addons-header: "<gold>Addon đã nạp <gray>(<count>)<gold>:"
+  # Dòng addon KHÔNG có prefix
+  addon-line: "  <yellow><name> <gray>v<version> <dark_gray>| <gray>type: <types> <dark_gray>| <gray><jar>"
+  addon-errors-header: "<red>Có <yellow><count></yellow><red> lỗi addon ở lần nạp gần nhất:"
+  addon-error-line: "<red> - <yellow><source></yellow><gray>: <reason>"

@@ -1,0 +1,14 @@
+name: UltimateWeapons
+version: '${version}'
+main: com.example.ultimateweapons.UltimateWeaponsPlugin
+api-version: '1.21'
+description: Framework vũ khí tùy chỉnh (lõi). Vũ khí được thêm bằng class + yml.
+commands:
+  uw:
+    description: Lệnh quản trị UltimateWeapons
+    usage: /<command> [give|list|reload]
+    aliases: [ultimateweapons]
+permissions:
+  uw.admin:
+    description: Cho phép dùng mọi lệnh /uw
+    default: op

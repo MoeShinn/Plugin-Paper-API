@@ -1,0 +1,58 @@
+# ============================================================
+# FILE MẪU - KHÔNG được nạp (đuôi .disabled).
+# Để dùng: copy ra file mới có đuôi .yml (ví dụ my_weapon.yml), sửa lại, rồi /uw reload.
+# Mỗi file .yml là một vũ khí. Nhiều file có thể dùng chung một "type".
+# ============================================================
+
+# ---------------- CÁC KHÓA BẮT BUỘC ----------------
+
+# Id duy nhất của vũ khí (chữ, số, '_' hoặc '-'). Dùng trong /uw give <id>.
+id: example_weapon
+
+# Loại hành vi (type do một addon jar khai báo trong addon.yml, hoặc type built-in).
+# Chưa có addon nào cung cấp type này thì file bị bỏ qua và báo lỗi.
+type: example_type
+
+# Tên hiển thị của item (MiniMessage).
+display-name: "<gradient:#ff5555:#ffaa00>Vũ Khí Mẫu</gradient>"
+
+# Mô tả ngắn (MiniMessage). Hiện ở dòng đầu của lore và trong /uw list.
+description: "<gray>Một vũ khí dùng để làm mẫu"
+
+# Vật liệu của item (tên Material của Bukkit, ví dụ DIAMOND_SWORD, CROSSBOW, ELYTRA).
+material: DIAMOND_SWORD
+
+# ---------------- CÁC TÙY CHỌN CHUNG (mọi vũ khí đều dùng được) ----------------
+
+# Thời gian hồi chiêu (giây). Lõi KHÔNG tự áp dụng, vũ khí tự đọc và gọi CooldownManager.
+cooldown-seconds: 5.0
+
+# Cho phép vũ khí gây sát thương lên chính chủ (mặc định false).
+self-damage: false
+
+# Bỏ qua thời gian miễn sát thương (i-frames) của mục tiêu (mặc định false).
+ignore-iframes: false
+
+# Bỏ qua giáp của mục tiêu (mặc định false).
+ignore-armor: false
+
+# Custom model data cho resource pack (số nguyên, bỏ khóa này nếu không dùng).
+# custom-model-data: 1001
+
+# Không bị hỏng độ bền (mặc định false).
+unbreakable: false
+
+# Ẩn dòng thuộc tính (attribute) trong tooltip (mặc định false).
+hide-attributes: false
+
+# Các dòng lore thêm vào bên dưới description (MiniMessage, bỏ khóa nếu không dùng).
+lore:
+  - "<dark_gray>Vũ khí huyền thoại"
+  - "<yellow>Click phải để sử dụng"
+
+# ---------------- CHỈ SỐ RIÊNG CỦA VŨ KHÍ ----------------
+# Tùy từng vũ khí, đọc bằng def.getDouble("damage", 7.0) tại thời điểm dùng.
+# Có thể để cùng cấp với các khóa trên hoặc gom trong một section.
+damage: 7.0
+range: 12.0
+color: "#ff5555"
