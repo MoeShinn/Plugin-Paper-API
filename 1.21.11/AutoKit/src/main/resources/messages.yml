@@ -1,0 +1,77 @@
+# Dinh dang MiniMessage. Placeholder dang <ten>.
+prefix: "<gradient:#f6d365:#fda085><bold>AutoKit</bold></gradient> <dark_gray>» <reset>"
+player-only: "<prefix><red>Lệnh này chỉ dùng được trong game."
+no-permission: "<prefix><red>Bạn không có quyền làm điều này."
+usage: "<prefix><yellow>Dùng: <white>/autokit [save|give|delete|list|reload|debug]"
+
+save:
+  usage: "<prefix><yellow>Dùng: <white>/autokit save [id] <gray>(thêm <white>overwrite</white> để ghi đè kit cũ)"
+  invalid-id: "<prefix><red>ID chỉ gồm chữ thường, số, <white>_</white> và <white>-</white> (tối đa 32 ký tự)."
+  exists: "<prefix><red>Kit <white><id></white> đã tồn tại. Dùng <white>/autokit save <id> overwrite</white> để ghi đè."
+  limit: "<prefix><red>Bạn đã đạt giới hạn <white><max></white> kit."
+  empty: "<prefix><red>Inventory của bạn trống, không có gì để lưu."
+  ok: "<prefix><green>Đã lưu kit <white><id></white> với <white><count></white> ô đồ. Bạn nhận được hộp nhạc."
+  ok-overwrite: "<prefix><green>Đã ghi đè kit <white><id></white> với <white><count></white> ô đồ."
+  error: "<prefix><red>Không lưu được kit (xem console)."
+
+give:
+  usage: "<prefix><yellow>Dùng: <white>/autokit give [id]"
+  not-found: "<prefix><red>Không tìm thấy kit <white><id></white>."
+  player-not-found: "<prefix><red>Không tìm thấy người chơi đó (cần từng vào server)."
+  ok: "<prefix><green>Bạn đã nhận hộp nhạc của kit <white><id></white>."
+  inv-full: "<prefix><yellow>Túi đồ đầy, hộp nhạc đã rơi xuống đất."
+
+delete:
+  usage: "<prefix><yellow>Dùng: <white>/autokit delete [id]"
+  ok: "<prefix><green>Đã xóa kit <white><id></white>."
+  not-found: "<prefix><red>Không tìm thấy kit <white><id></white>."
+  error: "<prefix><red>Không xóa được kit (xem console)."
+
+list:
+  empty: "<prefix><gray>Bạn chưa có kit nào."
+  header: "<prefix><yellow>Kit của bạn (<count>):"
+  line: "<dark_gray> • <white><id> <gray>(<count> ô đồ)"
+
+reload:
+  ok: "<prefix><green>Đã reload cấu hình."
+
+debug:
+  hold-item: "<prefix><red>Hãy cầm một vật phẩm trên tay."
+  header: "<prefix><yellow>Chi tiết tính giá:"
+  line: "<gray><line>"
+  total: "<prefix><yellow>Tổng giá (1 vật phẩm cầm trên tay): <gold><price>"
+
+box:
+  name: "<gold>♪ Hộp Kit: <yellow><id>"
+  lore:
+    - "<gray>Chủ kit: <white><owner>"
+    - ""
+    - "<green>Đặt xuống rồi click chuột phải <gray>để nhận kit"
+    - "<yellow>Shift + click chuột phải <gray>để xem giá"
+  placed: "<prefix><green>Đã đặt hộp kit. Click chuột phải để nhận, shift + click để xem giá."
+
+click:
+  busy: "<prefix><red>Bạn đang nhận kit, vui lòng chờ."
+  kit-missing: "<prefix><red>Kit <white><id></white> không còn tồn tại."
+  nothing: "<prefix><yellow>Tất cả ô đồ của kit đều đã có vật phẩm, không có gì để nhận."
+  not-enough: "<prefix><red>Không đủ tiền! Cần <gold><price></gold>, bạn có <gold><balance></gold>."
+  no-economy: "<prefix><red>Không tìm thấy hệ thống tiền (Vault). Liên hệ admin."
+  withdraw-failed: "<prefix><red>Không trừ được tiền, giao dịch bị hủy."
+  price-error: "<prefix><red>Có lỗi khi tính giá, giao dịch bị hủy. Liên hệ admin."
+  shop-unavailable: "<prefix><red>Hệ thống shop chưa sẵn sàng, thử lại sau."
+  too-expensive: "<prefix><red>Giá kit vượt mức cho phép, giao dịch bị hủy."
+  start: "<prefix><green>Bắt đầu nhận kit <white><id></white> <gray>(<count> ô đồ, trừ <gold><price></gold><gray>)"
+  start-free: "<prefix><green>Bắt đầu nhận kit <white><id></white> <gray>(<count> ô đồ, miễn phí)"
+  progress: "<green>♪ Đang nhận kit <white><given></white>/<white><total></white>"
+  done: "<prefix><green>Đã nhận <white><given></white> vật phẩm."
+  done-refund: "<prefix><yellow>Đã hoàn lại <gold><price></gold> cho <white><skipped></white> ô đã bị chiếm trong lúc nhận."
+  aborted: "<prefix><yellow>Đã hủy nhận kit giữa chừng, hoàn lại <gold><price></gold>."
+
+price:
+  header: "<prefix><yellow>Bảng giá kit <white><id></white>:"
+  summary: "<gray>Sẽ nhận <white><count></white> ô đồ, bỏ qua <white><skipped></white> ô đã có vật phẩm."
+  line: "<dark_gray> • <white><amount>x <item> <dark_gray>- <gold><price>"
+  more: "<dark_gray> ... và <more> món có giá khác"
+  free: "<gray> + <free> món miễn phí"
+  total: "<yellow>Tổng: <gold><total> <gray>| Số dư: <gold><balance>"
+  hint: "<green>Click chuột phải (không shift) <gray>để mua và nhận kit."

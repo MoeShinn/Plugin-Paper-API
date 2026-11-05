@@ -1,0 +1,22 @@
+name: AutoKit
+version: '${version}'
+main: dev.autokit.AutoKitPlugin
+api-version: '1.21'
+description: Luu inventory thanh kit, nhan kit bang hop nhac va tu dong mua theo gia EconomyShopGUI
+depend: [Vault]
+softdepend: [EconomyShopGUI, EconomyShopGUI-Premium]
+commands:
+  autokit:
+    description: Quan ly AutoKit
+    aliases: [akit]
+    usage: /autokit [save|give|delete|list|reload|debug]
+permissions:
+  autokit.use:
+    description: Click hop nhac de nhan kit
+    default: true
+  autokit.create:
+    description: Tao / nhan / xoa kit cua chinh minh
+    default: op
+  autokit.admin:
+    description: Reload, debug, give kit cua nguoi khac, bo qua gioi han kit
+    default: op

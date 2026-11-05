@@ -1,0 +1,36 @@
+# ===== AutoKit =====
+
+box:
+  # JUKEBOX hoac NOTE_BLOCK (chi anh huong hop nhac MOI duoc give; hop cu da dat van hoat dong)
+  material: JUKEBOX
+  # Thoi gian cho giua 2 lan click (ms)
+  click-cooldown-ms: 500
+
+kits:
+  # So kit toi da moi nguoi (autokit.admin bo qua gioi han)
+  max-per-player: 10
+
+pricing:
+  # Loai tien cua EconomyShopGUI se duoc tinh (khop theo ten, khong phan biet hoa thuong)
+  eco-type: VAULT
+  # Item chi co gia SELL: gia buy = sell * he so nay
+  sell-to-buy-multiplier: 5.0
+  # Cache gia (giay). 0 = tat cache (luon hoi ESG)
+  cache-seconds: 30
+  # Gia toi da cho 1 lan nhan kit (chan loi gia bat thuong)
+  max-total: 1000000000000
+
+give:
+  # Moi buoc give bao nhieu item, cach nhau bao nhieu tick (20 tick = 1 giay)
+  items-per-step: 1
+  step-interval-ticks: 2
+
+effects:
+  enabled: true
+  start-sound: "block.note_block.bell"
+  give-sound: "block.note_block.chime"
+  finish-sound: "entity.player.levelup"
+
+price-table:
+  # So dong item toi da khi shift + click xem gia
+  max-lines: 10
